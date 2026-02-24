@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GyanGuru - AI ML Learning Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>🧠 GyanGuru</h1>
+<p>AI Powered ML Learning Assistant</p>
+
+<input type="text" id="topicInput" placeholder="Enter ML Topic">
+
+<select id="levelSelect">
+    <option value="Beginner">Beginner</option>
+    <option value="Intermediate">Intermediate</option>
+    <option value="Advanced">Advanced</option>
+</select>
+
+<br><br>
+
+<button onclick="generateText()">📖 Generate Text</button>
+<button onclick="generateCode()">💻 Generate Code</button>
+<button onclick="generateAudio()">🎧 Generate Audio</button>
+<button onclick="generateQuiz()">🧠 Generate Quiz</button>
+
+<hr>
+
+<div id="outputBox"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
