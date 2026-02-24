@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>📘 Text Generator</h2>
+        <input id="textTopic" placeholder="Enter ML Topic">
+        <select id="textDepth">
+            <option>Brief</option>
+            <option>Detailed</option>
+            <option>Comprehensive</option>
+        </select>
+        <button onclick="generateText()">Generate</button>
+        <div id="textResult" class="output"></div>
+    </div>
+
+    <div class="card">
+        <h2>💻 Code Generator</h2>
+        <input id="codeTopic" placeholder="Enter Algorithm">
+        <button onclick="generateCode()">Generate</button>
+        <pre id="codeResult" class="output"></pre>
+    </div>
+
+    <div class="card">
+        <h2>🎧 Audio Generator</h2>
+        <input id="audioTopic" placeholder="Enter Topic">
+        <button onclick="generateAudio()">Generate</button>
+        <div id="audioResult" class="output"></div>
+    </div>
+
+</div>
+
+<div id="loader" class="loader hidden"></div>
+<div id="toast" class="toast hidden"></div>
+
+{% endblock %}
